@@ -1,5 +1,5 @@
 let members4 = document.getElementById('members4');
-let members45= document.getElementById('members5');
+let members5= document.getElementById('members5');
 
 // ===============================GROUP 4===============================
 
@@ -27,12 +27,11 @@ let grp4 = [{
 
 grp4.map((e) => {
     // Create card element
-    const card = document.createElement('div');
-    card.classList = 'card-body';
+    
     const content = `
    <div class="d-flex flex-column align-items-center text-center" >
-   <figure class="card-body"> 
-       <figcaption><br id="name">${e.name} <br><span class="fs-6" id="enrollment">${e.enrollment}</span> </figcaption>
+   <div> 
+       <div><br id="name">${e.name} <br><span class="fs-6" id="enrollment">${e.enrollment}</span> </div>
        <div class="buttons d-flex justify-content-around mt-1">
            <div>
                <span><a class="icons text-white" target="_blank" id="github" href="${e.github}"><i class="fa-brands fa-github"></i></a></span>
@@ -42,7 +41,7 @@ grp4.map((e) => {
                <span><a class="icons text-white"  target="_blank" id="live"  href="${e.live}"><i class="fa-solid fa-globe"></i></a></span>
            </div>
        </div>
-   </figure>
+   </div>
 </div>
    `;
     members4.innerHTML += content;
@@ -73,25 +72,23 @@ let grp5 = [{
     live: 'https://arzoofatima52.github.io/HIJABISTAA-2/Assignment-2/index.html'
 }];
 
-grp5.map((e, members5Card) => {
-    const card = document.createElement('div');
-    card.classList = 'card-body';
+grp5.map((e) => {
     const content = `
-   <div class="d-flex flex-column align-items-center text-center" id="${members5Card}">
-   <figure class="card-body"> 
-       <figcaption><br id="name">${e.name} <br><span class="fs-6" id="enrollment">${e.enrollment}</span> </figcaption>
-       <div class="buttons d-flex justify-content-around mt-1">
-           <div>
-               <span><a class="icons text-white" target="_blank" id="github" href="${e.github}"><i class="fa-brands fa-github"></i></a></span>
-
-           </div>
-           <div>
-               <span><a class="icons text-white"  target="_blank" id="live"  href="${e.live}"><i class="fa-solid fa-globe"></i></a></span>
-               </div>
-       </div>
-   </figure>
-   </div>
-   `;
+    <div class="d-flex flex-column align-items-center text-center" >
+    <div> 
+        <div><br id="name">${e.name} <br><span class="fs-6" id="enrollment">${e.enrollment}</span> </div>
+        <div class="buttons d-flex justify-content-around mt-1">
+            <div>
+                <span><a class="icons text-white" target="_blank" id="github" href="${e.github}"><i class="fa-brands fa-github"></i></a></span>
+ 
+            </div>
+            <div>
+                <span><a class="icons text-white"  target="_blank" id="live"  href="${e.live}"><i class="fa-solid fa-globe"></i></a></span>
+            </div>
+        </div>
+    </div>
+ </div>
+    `;
 
    members5.innerHTML += content;
 })
